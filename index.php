@@ -1,17 +1,10 @@
 <?php
+echo "hello";
+require 'Task.php';
 
-require 'Person.php';
-
-$greetings = "Hello, World!";
-
-$persons = [
-        'Name' => ' ',
-        'Age' => 0,
-        'Hair color' => 'black'
+$tasks = [
+    new Task("kill your sister"),
+    new Task("go hangout as you did nothing, and feel cool!"),
 ];
 
-$person = new Person('Afifi', 22);
-$persons['Name'] = $person->getName();
-$persons['Age'] = $person->getAge();
-
-require 'view.php';
+require 'index.view.php';
