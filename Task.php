@@ -5,16 +5,6 @@ Class Task {
     private $completed;
 
     /**
-     * Task constructor.
-     * @param $task
-     */
-    public function __construct($task)
-    {
-        $this->task = $task;
-        $this->completed = false;
-    }
-
-    /**
      * @return string
      */
     public function getTask()
