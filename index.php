@@ -1,6 +1,4 @@
 <?php
-echo "hello";
-require 'Task.php';
-require 'functions.php';
-$tasks = fetchAllTasks();
+require 'bootstrap.php';
+$tasks = $query->selectAll('tasks');
 require 'index.view.php';
