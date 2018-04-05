@@ -2,11 +2,19 @@
 
 class Connection
 {
-    // so we will call it using Connection::make()
-    public static function make()
+    /**
+     * @param $config : configuration array including the dsn, user, password.
+     * @return PDO
+     */
+    public static function make($config)
     {
         try {
-            return new PDO('mysql:host=localhost;dbname=todo', 'root', 'Mido--bel055');
+            return new PDO(
+                $config['dsn'],
+                $config['user'],
+                $config['password'],
+                $config['options']
+            );
         } catch (PDOException $e) {
             die($e->getMessage());
         }
